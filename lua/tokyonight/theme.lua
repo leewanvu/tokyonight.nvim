@@ -261,6 +261,11 @@ function M.setup(config)
     -- TSLiteral           = { };    -- Literal text.
     -- TSURI               = { };    -- Any URI like a link or email.
 
+    phpTSConstructor = { fg = c.blue2},
+    phpTSProperty = { fg = c.blue5 },
+    phpTSTypeBuiltin = { fg = c.magenta },
+    phpTSVariable = { fg = c.fg },
+
     -- Lua
     -- luaTSProperty = { fg = c.red }, -- Same as `TSField`.
 
