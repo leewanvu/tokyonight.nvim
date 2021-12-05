@@ -50,7 +50,7 @@ function M.setup(config)
     NormalNC = { fg = c.fg, bg = config.transparent and c.none or c.bg }, -- normal text in non-current windows
     NormalSB = { fg = c.fg_sidebar, bg = c.bg_sidebar }, -- normal text in non-current windows
     NormalFloat = { fg = c.fg, bg = c.bg_float }, -- Normal text in floating windows.
-    FloatBorder = { fg = c.border_highlight },
+    FloatBorder = { fg = c.border_highlight, bg = c.bg_float },
     Pmenu = { bg = c.bg_popup, fg = c.fg }, -- Popup menu: normal item.
     PmenuSel = { bg = util.darken(c.fg_gutter, 0.8) }, -- Popup menu: selected item.
     PmenuSbar = { bg = util.lighten(c.bg_popup, 0.95) }, -- Popup menu: scrollbar.
@@ -414,12 +414,41 @@ function M.setup(config)
     -- Cmp
     CmpDocumentation = { fg = c.fg, bg = c.bg_float },
     CmpDocumentationBorder = { fg = c.border_highlight, bg = c.bg_float },
+
     CmpItemAbbr = { fg = c.fg, bg = c.none },
-    CmpItemAbbrDeprecated = { fg = c.fg_gutter, bg = c.none },
-    CmpItemAbbrMatch = { fg = c.green1, bg = c.none },
-    CmpItemAbbrMatchFuzzy = { fg = c.green1, bg = c.none },
-    CmpItemKind = { fg = c.teal, bg = c.none },
+    CmpItemAbbrDeprecated = { fg = c.fg_gutter, bg = c.none, style = "strikethrough" },
+    CmpItemAbbrMatch = { fg = c.blue1, bg = c.none },
+    CmpItemAbbrMatchFuzzy = { fg = c.blue1, bg = c.none },
+
+    CmpItemKindDefault = { fg = c.fg_dark, bg = c.none },
     CmpItemMenu = { fg = c.comment, bg = c.none },
+      
+    CmpItemKindKeyword = { fg = c.cyan, bg = c.none },
+
+    CmpItemKindVariable = { fg = c.magenta, bg = c.none },
+    CmpItemKindConstant = { fg = c.magenta, bg = c.none },
+    CmpItemKindReference = { fg = c.magenta, bg = c.none },
+    CmpItemKindValue = { fg = c.magenta, bg = c.none },
+
+    CmpItemKindFunction = { fg = c.blue, bg = c.none },
+    CmpItemKindMethod = { fg = c.blue, bg = c.none },
+    CmpItemKindConstructor = { fg = c.blue, bg = c.none },
+
+    CmpItemKindClass = { fg = c.orange, bg = c.none },
+    CmpItemKindInterface = { fg = c.orange, bg = c.none },
+    CmpItemKindStruct = { fg = c.orange, bg = c.none },
+    CmpItemKindEvent = { fg = c.orange, bg = c.none },
+    CmpItemKindEnum = { fg = c.orange, bg = c.none },
+    CmpItemKindUnit = { fg = c.orange, bg = c.none },
+      
+    CmpItemKindModule = { fg = c.yellow, bg = c.none },
+
+    CmpItemKindProperty = { fg = c.green1, bg = c.none },
+    CmpItemKindField = { fg = c.green1, bg = c.none },
+    CmpItemKindTypeParameter = { fg = c.green1, bg = c.none },
+    CmpItemKindEnumMember = { fg = c.green1, bg = c.none },
+    CmpItemKindOperator = { fg = c.green1, bg = c.none },
+    CmpItemKindSnippet = { fg = c.dark5, bg = c.none },
   }
 
   theme.defer = {}
