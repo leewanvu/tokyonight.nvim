@@ -462,6 +462,9 @@ function M.setup(config)
     CmpItemKindEnumMember = { fg = c.green1, bg = c.none },
     CmpItemKindOperator = { fg = c.green1, bg = c.none },
     CmpItemKindSnippet = { fg = c.dark5, bg = c.none },
+
+    -- Treesitter Context
+    TreesitterContext = { fg = c.fg, bg = c.terminal_black },
   }
 
   theme.defer = {}
